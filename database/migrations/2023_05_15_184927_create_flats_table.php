@@ -18,6 +18,9 @@ return new class extends Migration
                 $table->string('name', 100)->nullable()->default('text');
                 $table->text('description')->nullable();
                 $table->bigInteger('user_id')->unsigned();
+                $table->string('img1', 100)->nullable()->default('1');
+                $table->string('img2', 100)->nullable()->default('2');
+                $table->string('img3', 100)->nullable()->default('3');
                 $table->timestamps();
                 $table->foreign('user_id')->references('id')->on('users')
                     ->onDelete('cascade');
